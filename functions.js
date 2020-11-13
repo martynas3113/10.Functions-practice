@@ -57,3 +57,54 @@ function highestNumber (arrayOfNumbers) {
 }
 
 highestNumber([1,23,34,56,78])
+
+
+function positiveSum(arr) {
+    const array = arr;
+    let result = 0;
+    let number = 0;
+    
+    for (i = 0; i<arr.length; i++){
+      if (result < arr[i]){
+        result = arr[i];
+        number = number+arr[i];
+      }
+    }
+    console.log(number);
+  }
+
+  positiveSum([-1,-2,-3,4,5]);
+
+
+
+
+  function smallestNumber (arrayOfNumbers) {
+    const numbers = arrayOfNumbers; /* Musu irasyta reiksme */
+    let result = arrayOfNumbers[0] ; /* PRadedas skaiciuot nuo pacios pirmos saraso reiksmes ir ja laikom uz didziausia,nes rezultata pryliginsime 0 , galesim isgauti tik teigiamas reiksmes. Neigiami skaiciai bus ignoruojami,nes jie maziau nei 0 */
+    
+    for (let i = 0; i < numbers.length; i++) {
+       
+             if (result > numbers[i]) {
+             result = numbers[i];
+            }
+            
+        }
+        console.log(`Smallest number is: ${result}`)
+  }
+smallestNumber([23,45,-1,-45])
+
+
+
+
+const numbers = [1,2,1,1,1,1,]
+let result = numbers[0];
+
+for (let i = 0;  i< numbers.length; i++) {
+    if (result !== numbers[i]) {
+        result = numbers[i];
+
+        
+    }
+    
+}
+console.log(result);
