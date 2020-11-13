@@ -34,8 +34,26 @@ function division (interval1,interval2,divisionBy){
         }
         
     }
-    console.log(`Only ${result} numbers of entered interval can divide by ${daliklis} without remainder.`);
+    console.log(`Only ${result} numbers of interval from ${intervalas1} to ${intervalas2} can divide by ${daliklis} without remainder.`);
 }
 
 division(55,100,4)
 
+
+function highestNumber (arrayOfNumbers) {
+    const numbers = arrayOfNumbers; /* Musu irasyta reiksme */
+    let result = arrayOfNumbers[0] ; /* PRadedas skaiciuot nuo pacios pirmos saraso reiksmes ir ja laikom uz didziausia,nes rezultata pryliginsime 0 , galesim isgauti tik teigiamas reiksmes. Neigiami skaiciai bus ignoruojami,nes jie maziau nei 0 */
+    
+    for (let i = 0; i < numbers.length; i++) {
+       
+             if (result < numbers[i]) {
+             result = numbers[i];
+            }
+            
+        }
+        console.log(`Highest number is: ${result}`)
+    
+
+}
+
+highestNumber([1,23,34,56,78])
