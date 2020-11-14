@@ -168,3 +168,25 @@ console.log(strArray);
 }
 
 numToBin('7464748367525343')
+
+//Function sorts string of numbers by descending order
+
+function sortHighToLow(numStr) {
+const num = numStr;
+let array = [];
+const str = num.toString();
+// console.log(str);
+
+for (let i = 0; i < str.length; i++) {
+  array.push(str[i]);  
+}
+
+array = array.sort()
+array.reverse()
+array = array.join('')
+console.log(array);
+}
+
+sortHighToLow('46294627346238472637845236')
+
+
