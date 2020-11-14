@@ -189,4 +189,24 @@ console.log(array);
 
 sortHighToLow('46294627346238472637845236')
 
+//Function counts positive numbers in array and sums negative numbers
 
+function posCountnegSum (array1) {
+const array = array1;
+let count = 0;
+let sum = 0;
+let result = [];
+
+for (let i = 0;  i< array.length; i++) {
+  if (array[i] > 0) {
+    count++
+
+  }
+  if (array[i]< 0 )
+  sum = sum + array[i]
+}
+result.push(count,sum)
+console.log(`Pisitive numbers : ${count}, sum of negative numbers is : ${sum}`);
+}
+
+posCountnegSum ([1,2,3,-4,5])
