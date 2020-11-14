@@ -129,3 +129,42 @@ console.log(`You can be sure that ${friend} is your friend(s)!`)
 
 friendOrFoe(['Michael','John','Otto'])
 
+//Reverses positive number to negative but negative numbers and zero remains same.
+
+function reversePosNum (num){
+const number = num;
+let lastNumber = 0;
+
+
+if (number > 0) {
+  lastNumber = number - (number*2)
+} else {
+  lastNumber = number;
+}
+console.log(lastNumber);
+}
+
+//Function that converts string of digits into a BIN number. All numbers below 5 will be 0 , and any numbers of 5 and above will be 1
+
+function numToBin(Strnum) {
+const str = Strnum;
+let strArray = [];
+
+for (let i = 0;  i< str.length; i++) {
+strArray.push(str[i])
+}
+for (let i = 0;  i< strArray.length; i++) {
+  if (strArray[i] < 5) {
+    strArray[i] = 0;
+  }
+  if (strArray[i] >= 5) {
+    strArray[i] = 1;
+  }
+  
+}
+
+strArray = strArray.join('');
+console.log(strArray);
+}
+
+numToBin('7464748367525343')
