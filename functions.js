@@ -210,3 +210,44 @@ console.log(`Pisitive numbers : ${count}, sum of negative numbers is : ${sum}`);
 }
 
 posCountnegSum ([1,2,3,-4,5])
+
+//Function Checks to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+function XandO (string) {
+const input = string;
+let countx = 0;
+let county = 0;
+let array = [];
+let result ='';
+let input1 = input.toUpperCase()
+
+if (input.length === 0) {
+  result = true;
+}
+for (let i = 0;  i< input1.length; i++) {
+array.push(input1[i]);
+}
+for (let i = 0;  i< array.length; i++) {
+  if (array[i] === 'X') {
+  countx++;
+  }
+  if (array[i]==='O') {
+    county++;
+  }
+  if (countx === county) {
+    result = true;  
+  }
+    else if (countx === 0 & county === 0) {
+      result = true;
+      
+    }else {
+      result = false;
+    }
+  
+} console.log(result);
+
+}
+
+
+
+
