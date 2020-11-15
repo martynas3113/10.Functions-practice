@@ -248,6 +248,32 @@ for (let i = 0;  i< array.length; i++) {
 
 }
 
+// Function Sums all the numbers of the array  except the highest and the lowest element (the value, not the index!).
 
+function sumArray (SumArray) {
+const array = SumArray;
+let result = 0;
+  for (let i = 0; i < array.length; i++) {
+  for (let j = 0; j < array.length; j++) {
+    if (array[j] < array[j + 1]){
+      temp = array[j];
+      array[j] = array[j+1];
+      array[j+1] = temp;
+      console.log(array);
+  }
+}
+}
+  array.pop(array)
+  array.shift(array)
+  console.log(array);
+  for (let i = 0; i < array.length; i++) {
+    result = result + array[i]
+  
+}
+
+console.log(result)
+}
+
+sumArray ([1,2,3,10,20])
 
 
