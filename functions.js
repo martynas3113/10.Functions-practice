@@ -283,3 +283,5 @@ console.log(`Sum of array without highest and smallest number is: ${result}`)
 
 sumArray ([1,2,3,10,20])
 
+
+
