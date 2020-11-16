@@ -2,17 +2,24 @@
 //Function that reverses given word
 
 function reverseWord (word){
-    const input = word;
-    let result = '';
+  const input = word;
+  let result = '';
 
-    for (let i = input.length - 1; i >= 0; i--) {
-        result = result + input[i];
-        
-    }
-    console.log(result);
+  for (let i = input.length - 1; i >= 0; i--) {
+      result = result + input[i];
+      
+  }
+  console.log(result);
 }
 
 reverseWord('methamfetamine')
+
+//Function removes first and last character in word
+function FirstAndLast(str){
+const string = str;
+let removed = string.slice(1,-1);
+console.log(removed);
+}
 
 //Function finds how many times numbers from given interval can be divided by given number without remainder
 
@@ -259,21 +266,20 @@ let result = 0;
       temp = array[j];
       array[j] = array[j+1];
       array[j+1] = temp;
-      console.log(array);
+      
   }
 }
 }
   array.pop(array)
   array.shift(array)
-  console.log(array);
+
   for (let i = 0; i < array.length; i++) {
     result = result + array[i]
   
 }
 
-console.log(result)
+console.log(`Sum of array without highest and smallest number is: ${result}`)
 }
 
 sumArray ([1,2,3,10,20])
-
 
