@@ -14,6 +14,8 @@ function reverseWord (word){
 
 reverseWord('methamfetamine')
 
+
+
 //Function removes first and last character in word
 function FirstAndLast(str){
 const string = str;
@@ -29,8 +31,8 @@ function division (interval1,interval2,divisionBy){
     const intervalas2 = interval2;
     const daliklis = divisionBy;
     let result = 0;
-
-    for (let i = intervalas1; i < intervalas2; i++) {
+      
+    for (let i = intervalas1; i <= intervalas2; i++) {
         if (i%daliklis===0) {
             result = result+1;
             
@@ -40,7 +42,8 @@ function division (interval1,interval2,divisionBy){
     console.log(`Only ${result} numbers in interval from ${intervalas1} to ${intervalas2} can divide by ${daliklis} without remainder.`);
 }
 
-division(55,100,4)
+
+division(0,1000,3)
 
 //Function finds highest number from array
 
