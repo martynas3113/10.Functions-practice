@@ -332,3 +332,25 @@ function twoPositive (number) {
   
 }
 console.log(twoPositive ([4,23,6,345,63456,]));
+
+//Function finds even number among odd numbers and return even number index
+function EvenInOdd (numbers) {
+const input = numbers;
+let spacecount = 0;
+let indexcount = 0;
+let result = 0;
+
+for (let i = 0; i < input.length; i++) {
+  if(input[i]===' '){
+    spacecount += 1;
+  }
+  if (input[i]%2===0){
+    indexcount = i;
+  }
+  
+}
+result = indexcount-spacecount
+return `Even number at index: ${result}`
+}
+
+console.log(EvenInOdd('3 5 7 9 3 1 4 3 5'))
