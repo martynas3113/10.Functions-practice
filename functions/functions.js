@@ -287,4 +287,48 @@ console.log(`Sum of array without highest and smallest number is: ${result}`)
 sumArray ([1,2,3,10,20])
 
 
+// Function sums two lowest positive numbers from array.
+function twoPositive (number) {
 
+  let input = number;
+  let result = 0;
+  let first = 0;
+  let second = 0;
+
+  if(typeof input !=='object'){
+    return 'Wrong input type!'
+  }
+
+  if(input.length === 0){
+    return 'Input is empty';
+  }
+
+
+
+  for (let i = 0; i < input.length; i++) {
+    if(typeof input[i]!=='number'){
+      return 'Input must be only numbers';
+    }
+
+    if (input[i]<0){
+      return 'Input must be only positive numbers';
+    }
+    for (let j = 0; j < input.length; j++) {
+      if (input[j] > input[j+1]){
+        let temp = input[j+1];
+        input[j+1] = input[j]
+        input[j] = temp;
+        console.log(input);
+      } 
+    } 
+  }
+  
+  first = input[0];
+  input.shift();
+  second = input[0];
+  result = first + second;
+  return `Sum of two lowest positive numbers is: ${result}`;
+
+  
+}
+console.log(twoPositive ([4,23,6,345,63456,]));
