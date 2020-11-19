@@ -121,6 +121,27 @@ console.log (`Highest number is ${result} , smallest number is ${resultSmall}`)
 
 SmallestAndHighestNumber([1,2,3,-34,5,-100,120])
 
+
+//Function find Highest and Smallest number from array version 2.
+
+function minMax(arr){
+  const input = arr;
+  let array =[];
+  let size = input.length-1
+  for (i = 0; i < input.length; i++) {
+    for(j =0; j < input.length; j++) {
+      if(input[j] > input[j+1]) {
+        let temp = input[j+1];
+        input[j + 1] = input[j];
+        input[j] = temp;
+      }
+    }
+  }
+  array.push(input[0])
+  array.push(input[size])
+    return array;
+}  
+
 //Function that finds name from array that has exactly 4 letters and considers it as your friend.
 
 function friendOrFoe(array){
@@ -354,3 +375,40 @@ return `Even number at index: ${result}`
 }
 
 console.log(EvenInOdd('3 5 7 9 3 1 4 3 5'))
+
+// Function  takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+function filter_list(l) {
+  const input = l;
+let array = [];
+
+for(i = 0; i<=input.length; i++){
+  if(typeof input[i]==='number'){
+    array.push(input[i]);
+  }
+}
+  return array;
+}
+
+
+//Mr. Scrooge has a sum of money 'P' that he wants to invest. Before he does, he wants to know how many years 'Y' this sum 'P' has to be kept in the bank in order for it to amount to a desired sum of money 'D'.
+//The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly. After paying taxes 'T' for the year the new sum is re-invested.
+
+function calculateYears(principal, interest, tax, desired) {
+    
+  let amount = principal;
+  const interest1 = interest;
+  const tax1 = tax;
+  const desired1 = desired;
+  let years = 0;
+  
+  while (amount < desired1) {
+    let yearlyInterest = amount * interest1;
+    let yearlyTax = yearlyInterest - (yearlyInterest*tax1);
+    amount = amount + yearlyTax;
+    years+=1
+  }
+    return years;
+  }
+
+  
