@@ -1,3 +1,3 @@
-# Writed several different mathematical functions. <br>
+## Writed several different mathematical functions. <br>
 
-### All functions have descriptions for what You can use thne for.
+### All functions have descriptions for what You can use them for.
